@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Source">
+      <UniqueIdentifier>{e85fc9f6-a631-4462-a6a9-8ca762ad5a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Source\Контейнеры">
+      <UniqueIdentifier>{8a325049-a764-4aad-bd24-84440024a084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Source\c++14">
+      <UniqueIdentifier>{f6cbc90d-f69a-4932-8f20-0749c318d42c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Source\c++17">
+      <UniqueIdentifier>{5f1d82a8-16d6-456c-85fd-5a9f3c063e4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CommonBoost.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ptr.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TestClass.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Template.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Help.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DataClass.cpp">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Common.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CommonBoost.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ptr.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TestClass.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Template.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DequeExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MapExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SetExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ListExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Help.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StackExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\QueueExample.h">
+      <Filter>Исходные файлы\Source\Контейнеры</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SortExample.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DataClass.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Buffer.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\For.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPtr.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cpp14.h">
+      <Filter>Исходные файлы\Source\c++14</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cpp17.h">
+      <Filter>Исходные файлы\Source\c++17</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Source\DataClassT.h">
+      <Filter>Исходные файлы\Source</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

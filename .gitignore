@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Castom
+Example/.vs
+Example/Debug
+Example/Release
+Example/Example/Release
+Example/Example/Debug
+Example/TestMain
