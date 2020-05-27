@@ -51,6 +51,9 @@
     <ClCompile Include="Source\DataClass.cpp">
       <Filter>Исходные файлы\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Cpp14.cpp">
+      <Filter>Исходные файлы\Source\c++14</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Common.h">

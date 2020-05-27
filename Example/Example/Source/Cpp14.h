@@ -2,11 +2,8 @@
 
 #include "TestClass.h"
 
-void funAuto() {
-	TestClass::line("funAuto()");
-	std::cout << std::endl;
-}
+void funReturnAuto();
 
 void functionsCpp14() {
-	funAuto();
+	funReturnAuto();
 }

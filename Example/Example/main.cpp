@@ -126,8 +126,8 @@ int main(int count, char** param)
 
 	funFor();*/
 
-	void functionsCpp14();
-	void functionsCpp17();
+	functionsCpp14();
+	functionsCpp17();
 
 	// auto
 	/*{

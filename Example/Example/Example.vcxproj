@@ -118,6 +118,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Source\Common.cpp" />
     <ClCompile Include="Source\CommonBoost.cpp" />
+    <ClCompile Include="Source\Cpp14.cpp" />
     <ClCompile Include="Source\DataClass.cpp" />
     <ClCompile Include="Source\Help.cpp" />
     <ClCompile Include="Source\Ptr.cpp" />
