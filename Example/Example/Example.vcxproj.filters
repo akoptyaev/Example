@@ -25,6 +25,9 @@
     <Filter Include="Исходные файлы\Source\c++17">
       <UniqueIdentifier>{5f1d82a8-16d6-456c-85fd-5a9f3c063e4f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Source\c++11">
+      <UniqueIdentifier>{c134586c-47f6-4181-a68e-9ca4a09c4649}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="Source\Cpp14.cpp">
       <Filter>Исходные файлы\Source\c++14</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cpp11.cpp">
+      <Filter>Исходные файлы\Source\c++11</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cpp17.cpp">
+      <Filter>Исходные файлы\Source\c++17</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="Source\Cpp17.h">
       <Filter>Исходные файлы\Source\c++17</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cpp11.h">
+      <Filter>Исходные файлы\Source\c++11</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TestClassConstruct.h">
+      <Filter>Исходные файлы\Source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

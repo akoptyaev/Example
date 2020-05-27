@@ -17,12 +17,12 @@ public:
 	static long _timeStart;
 
 	TestClass();
-	~TestClass() {};
+	virtual ~TestClass() {};
 
 	TestClass(const string& text);
-	
+
 	void action() const;
-	const TestClass& operator=(const string& text);
+	const TestClass operator=(const string& text);
 	bool operator==(const string& text);
 	bool operator!=(const string& text);
 
@@ -40,6 +40,9 @@ public:
 	static void message(const string& text);
 	static void line(const string& text = string());
 	static void lineShort(const string& text = string());
+
+protected:
+	void setText(const string& text);
 
 public:
 	virtual void virtualMethod(float var);

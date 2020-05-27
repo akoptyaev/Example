@@ -14,6 +14,7 @@
 #include "Source/For.h"
 #include "Source/DataClass.h"
 
+#include "Source/Cpp11.h"
 #include "Source/Cpp14.h"
 #include "Source/Cpp17.h"
 
@@ -91,12 +92,6 @@ int main(int count, char** param)
 
 	/*testDataClass();
 	testDataClassT();
-
-	funSharedPtr();
-	funWeakPtr();
-	funRemovePtr();
-	funEmptyPtr();
-
 	functionVector();
 	// KOP_CRASH functionsSet();
 	functionsMap();
@@ -126,8 +121,11 @@ int main(int count, char** param)
 
 	funFor();*/
 
-	functionsCpp14();
-	functionsCpp17();
+	//funPtr();
+
+	functionsCpp11();
+	//functionsCpp14();
+	//functionsCpp17();
 
 	// auto
 	/*{

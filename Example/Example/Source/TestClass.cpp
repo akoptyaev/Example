@@ -8,30 +8,35 @@
 long TestClass::_timeStart = clock();
 int TestClass::_countGlobal = 0;
 
-TestClass::TestClass()
+TestClass::TestClass() :
+	_text("DEFAULT_TEXT")
 {
 	++_countGlobal;
 	_number = _countGlobal;
 
-	_text = "DEFAULT_TEXT";
+//	_text = "DEFAULT_TEXT";
 	startTime();
 };
 
-TestClass::TestClass(const string& text)
+TestClass::TestClass(const string& text) :
+	_text(text)
 {
 	++_countGlobal;
 	_number = _countGlobal;
 
-	_text = text;
+	//_text = text;
+	// setText(text);
 	startTime();
 };
+
+void init();
 
 void TestClass::action() const
 {
 	cout << "TestClass::_text: " << _text << endl;
 }
 
-const TestClass& TestClass::operator=(const string& text)
+const TestClass TestClass::operator=(const string& text)
 {
 	_text = text;
 	return *this;
@@ -132,6 +137,10 @@ void TestClass::lineShort(const string& text)
 	{
 		cout << "\n------ (" << text << ")" << endl;
 	}
+}
+
+void TestClass::setText(const string& text) {
+	_text = text;
 }
 
 // Virtual

@@ -2,6 +2,4 @@
 
 #include "TestClass.h"
 
-void functionsCpp17() {
-
-}
+void functionsCpp17();

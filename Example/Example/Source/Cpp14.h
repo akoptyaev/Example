@@ -2,8 +2,6 @@
 
 #include "TestClass.h"
 
-void funReturnAuto();
+void functionsCpp14();
 
-void functionsCpp14() {
-	funReturnAuto();
-}
+// C++14 https://ru.wikipedia.org/wiki/C%2B%2B14

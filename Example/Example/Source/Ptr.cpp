@@ -1,11 +1,12 @@
 #include "Ptr.h"
 #include "TestClass.h"
+#include "TestClassConstruct.h"
 
 #include <memory>
 
 void funSharedPtr()
 {
-	TestClass::line("funSharedPtr");
+	TestClass::lineShort("funSharedPtr");
 
 	shared_ptr<TestClass> objectPtr0(new TestClass());
 	shared_ptr<TestClass> objectPtr1 = shared_ptr<TestClass>(new TestClass("objectPtr1"));
@@ -28,14 +29,14 @@ void funSharedPtr()
 	{
 		TestClass::message("object1 == nullptr");
 	}
-
+	cout << "objectPtr1 = objectPtr0" << endl;
 	objectPtr1 = objectPtr0;
 	objectPtr1->action();
 }
 
 void funWeakPtr()
 {
-	TestClass::line("funWeakPtr");
+	TestClass::lineShort("funWeakPtr");
 
 	std::shared_ptr<TestClass> ptr = std::make_shared<TestClass>("std::shared_ptr<TestClass> foo = w.lock()");
 	std::weak_ptr<TestClass> w(ptr);
@@ -54,7 +55,7 @@ void funWeakPtr()
 
 void funRemovePtr()
 {
-	TestClass::line("funRemovePtr");
+	TestClass::lineShort("funRemovePtr");
 
 	TestClass* test = new TestClass();
 	std::shared_ptr<TestClass> testPtr(test);
@@ -73,7 +74,7 @@ void funRemovePtr()
 
 void funEmptyPtr()
 {
-	TestClass::line("funEmptyPtr");
+	TestClass::lineShort("funEmptyPtr");
 
 	std::shared_ptr<TestClass> emptyTestPtr;
 
@@ -96,4 +97,64 @@ void funEmptyPtr()
 	{
 		TestClass::message("NO has [1]");
 	}
+}
+
+//-------------------------------------
+
+void funUniquePtr() {
+	typedef TestClassConstruct TEST_CLASS; // TestClassConstruct // TestClass
+
+	TestClass::lineShort("funUniquePtr");
+
+	TEST_CLASS* pObj1 = new TEST_CLASS("UniquePtr");
+	unique_ptr<TEST_CLASS> ptr1 = unique_ptr<TEST_CLASS>(pObj1);
+
+	if (ptr1) {
+		ptr1->action();
+	}
+
+	// unique_ptr<TestClass> ptr2 = ptr1; ERROR
+
+	TEST_CLASS* pObj2 = new TEST_CLASS("UniquePtr_2");
+	unique_ptr<TEST_CLASS> ptr2;
+	ptr2 = unique_ptr<TEST_CLASS>(pObj2);
+
+	if (ptr2) {
+		ptr2->action();
+	}
+
+	cout << "ptr1 = std::move(ptr2);" << endl;
+	ptr1 = std::move(ptr2);
+
+	// Указатель из ptr2 переходит к ptr1, а указатель ptr1 удаляется (перед этим)
+
+	if (ptr1) {
+		ptr1->action();
+	}
+	else {
+		cout << "ptr1 == nullptr" << endl;
+	}
+
+	if (ptr2) {
+		ptr2->action();
+	}
+	else {
+		cout << "ptr2 == nullptr" << endl;
+	}
+}
+
+//-------------------------------------
+//-------------------------------------
+//-------------------------------------
+//-------------------------------------
+
+void funPtr() {
+	TestClass::line("funSharedPtr");
+
+	//funSharedPtr();
+	//funWeakPtr();
+	//funRemovePtr();
+	//funEmptyPtr();
+
+	//funUniquePtr();
 }
