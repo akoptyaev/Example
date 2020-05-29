@@ -138,7 +138,7 @@ void funTemplate() {
 
 	VSPACE;
 
-	funT2("11.0f"s);
+	funT2(11.0f);
 
 }
 

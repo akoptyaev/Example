@@ -17,6 +17,10 @@ void funList()
 	listTest.push_front(92);
 	listTest.push_front(91);
 
+	// нельзя auto v = listTest[0];
+
+	listTest.insert(listTest.begin(), 5);
+
 	{
 		auto it = listTest.insert(listTest.begin(), 12345);
 		listTest.insert(it, 123456789);

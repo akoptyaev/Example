@@ -544,19 +544,34 @@ void funIterators()
 
 }
 
+//--------------------------------------------------
+
+void funAdd() {
+	vector<int> vConst  = {1, 2, 3, 4};
+
+	vector<int> v;
+	v.push_back(23);
+	v.emplace_back(1);
+	v.insert(v.begin(), 2);
+}
+
+//--------------------------------------------------
+
 void functionVector()
 {
-	//funVector();
-	//funVector2();
+	/*funVector();
+	funVector2();
 
-	//funVectorSortInt();
-	//funVectorSortTestClass();
+	funVectorSortInt();
+	funVectorSortTestClass();
 
-	//funVectorFindInt();
-	//funVectorCopyEndInt();
-	funVectorAt();
+	funVectorFindInt();
+	funVectorCopyEndInt();
+	funVectorAt();*/
 
 	//funIterators();
+
+	funAdd();
 
 }
 

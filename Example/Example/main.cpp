@@ -92,16 +92,17 @@ int main(int count, char** param)
 	}
 
 	/*testDataClass();
-	testDataClassT();
-	functionVector();*/
-	// KOP_CRASH 	functionsSet();
-	//functionsMap();
-	/*functionDeque();
+	testDataClassT();*/
+	functionVector();
+	// KOP_CRASH 	
+	functionsSet();
+	functionsMap();
+	functionDeque();
 	functionList();
 	functionQueue();
 	functionStack();
 
-	funVirtualOveride();
+	/*funVirtualOveride();
 	funenumClass();
 	funLambda();
 	funLambdaForEach();
@@ -114,7 +115,7 @@ int main(int count, char** param)
 
 	funCopyClass();*/
 
-	functionsTemplate();
+	//functionsTemplate();
 
 	/*functionSort();
 

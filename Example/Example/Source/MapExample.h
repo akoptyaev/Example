@@ -24,6 +24,10 @@ void funMap()
 		map<string, TestClass> testMap;
 
 		testMap.insert(pair<string, TestClass>("third", TestClass("thisrdItem")));
+		
+		testMap.emplace(pair<string, TestClass>("first", TestClass("thisrdItem ++++++++++ ____")));
+		testMap.emplace(pair<string, TestClass>("first_", TestClass("thisrdItem ++++++++++ ____")));
+
 		testMap["second"] = "Second_0";
 		testMap["second"] = "Second_02";
 		testMap["first"] = TestClass("First_0");
@@ -121,6 +125,8 @@ void funMultiMap()
 		
 		testMap.insert(pair<string, TestClass>("first", TestClass("First_0")));
 		
+		testMap.emplace(pair<string, TestClass>("first", TestClass("First_0 ____")));
+
 		pair<string, TestClass> pairS = pair<string, TestClass>("second", "Second_0");
 		testMap.insert(pairS);
 		testMap.insert(pairS);
@@ -175,7 +181,7 @@ void funMultiMap()
 void functionsMap()
 {
 	funMap();
-	//funMultiMap();
+	funMultiMap();
 }
 
 // vetor, map ... http://proginfo.ru/vector/

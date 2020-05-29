@@ -23,6 +23,8 @@ void funSet()
 		testSetInt.insert(int(6));
 		testSetInt.insert(int(2));
 
+		int v = *testSetInt.begin();
+
 		for (set<int>::iterator it = testSetInt.begin(); it != testSetInt.end(); ++it)
 		{
 			cout << *it << endl;
