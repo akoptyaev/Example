@@ -75,7 +75,7 @@ void funSet()
 			}
 
 			{
-				set<TestClass>::iterator it = testSet.find(TestClass("tAest_01"));
+				set<TestClass>::iterator it = testSet.find(TestClass("test_01")); // tAest_01 ERROR
 
 				if (it != testSet.end())
 				{
@@ -173,7 +173,7 @@ void funMultiSet()
 			}
 
 			{
-				multiset<TestClass>::iterator it = testSet.find(TestClass("tAest_01"));
+				multiset<TestClass>::iterator it = testSet.find(TestClass("test_01")); // ERROR tAest_01
 
 				if (it != testSet.end())
 				{

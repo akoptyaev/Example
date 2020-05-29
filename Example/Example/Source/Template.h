@@ -85,50 +85,113 @@ public:
 
 //----------------------
 
+template <typename T>
+T fun(T x, T y) {
+	T z = x + y;
+	COUT "usual fun: " << z << " = " << x << " + " << y ENDL;
+	return z;
+}
+
+template <typename T>
+T fun(T& x, T& y) {
+	T z = x + y;
+	COUT "lvalue fun: " << z << " = " << x << " + " << y ENDL;
+	return z;
+}
+
+template <typename T>
+T fun(T* x, T* y) {
+	T* z = new T(*x + *y);
+	COUT "ptr fun: " << *z << " = " << *x << " + " << *y ENDL;
+	T returnZ = *z;
+	delete z;
+	return returnZ;
+}
+
+template<typename T, int T2 = 5>
+T funT2(T x) {
+	T z = x + T2;
+	COUT "funT2: " << z << " = " << x << " + " << T2 ENDL;
+	return z;
+}
+
+void funTemplate() {
+	TestClass::lineShort("funTemplate");
+
+
+	fun(4, 7);
+
+	fun("tex1"s, "text2"s);
+
+	int x = 5;
+	int y = 7;
+	
+	/* Нельзя из-за "T fun(T x, T y) {"
+	fun(x, y);
+
+	int& rx = x;
+	int& ry = y;
+	
+	fun(rx, ry);*/
+
+	fun(new float(50.0f), new float(100.0f));
+
+	VSPACE;
+
+	funT2("11.0f"s);
+
+}
+
+//----------------------
+
 void functionsTemplate()
 {
 	TestClass::line("functionsTemplate");
 
-	int vInt = 0;
-	CA cA;
-	CB cB;
-	CC cC;
-	cC.varC = 0;
+	/*{
+		int vInt = 0;
+		CA cA;
+		CB cB;
+		CC cC;
+		cC.varC = 0;
 
-	cC = funT2(cA, cA);
+		cC = funT2(cA, cA);
 
-	ST1_2<int, char> sAB;
-	sAB._tA = 0;
-	sAB._tB = '0';
-	cC = funT2(sAB, cA);
+		ST1_2<int, char> sAB;
+		sAB._tA = 0;
+		sAB._tB = '0';
+		cC = funT2(sAB, cA);
 
-	{
-		cC = funT2T(cC, cA, cB);
-		cout << "cC = " << cC.varC << endl;
-	}
+		{
+			cC = funT2T(cC, cA, cB);
+			cout << "cC = " << cC.varC << endl;
+		}
 
-	{
-		cB = funT2T_var(cB, cA, cC);
-		cout << "cB = " << cB.var << endl;
-	}
+		{
+			cB = funT2T_var(cB, cA, cC);
+			cout << "cB = " << cB.var << endl;
+		}
 
-	ST1_2<CA, CB> s_cAcB;
-	cC = funT2(sAB, s_cAcB);
+		ST1_2<CA, CB> s_cAcB;
+		cC = funT2(sAB, s_cAcB);
 
-	CAB<std::string> c_CAB;
-	cC = funT2(c_CAB, s_cAcB);
+		CAB<std::string> c_CAB;
+		cC = funT2(c_CAB, s_cAcB);
 
-	CAB<ST1_2<int*, std::string>> c_CAB2;
-	cC = funT2(c_CAB2, s_cAcB);
+		CAB<ST1_2<int*, std::string>> c_CAB2;
+		cC = funT2(c_CAB2, s_cAcB);
 
-	CSAB<ST1_2<int*, std::string>, char> c_CAB3;
-	cC = funT2(c_CAB2, c_CAB3);
+		CSAB<ST1_2<int*, std::string>, char> c_CAB3;
+		cC = funT2(c_CAB2, c_CAB3);
 
-	c_CAB3._var._tA.varA = 11;
+		c_CAB3._var._tA.varA = 11;
 
-	vInt = funT4(cA);
+		vInt = funT4(cA);
 
-	cA = funT4R(cA);
+		cA = funT4R(cA);
+	}*/
 
 	TestClass::lineShort();
+
+	funTemplate();
 }

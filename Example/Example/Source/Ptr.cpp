@@ -1,6 +1,7 @@
 #include "Ptr.h"
 #include "TestClass.h"
 #include "TestClassConstruct.h"
+#include "Inheritance.h"
 
 #include <memory>
 
@@ -102,6 +103,8 @@ void funEmptyPtr()
 //-------------------------------------
 
 void funUniquePtr() {
+	TestClass::lineShort("UniquePtr");
+
 	typedef TestClassConstruct TEST_CLASS; // TestClassConstruct // TestClass
 
 	TestClass::lineShort("funUniquePtr");
@@ -144,6 +147,18 @@ void funUniquePtr() {
 }
 
 //-------------------------------------
+
+void funSharedPtrArray() {
+	TestClass::lineShort("SharedPtrArray");
+
+	{
+		shared_ptr<int> arrayPtr = shared_ptr<int>(new int[3]);
+	}
+	{
+		shared_ptr<Base[]> arrayPtr = shared_ptr<Base[]>(new Base[3]);
+	}
+}
+
 //-------------------------------------
 //-------------------------------------
 //-------------------------------------
@@ -157,4 +172,6 @@ void funPtr() {
 	//funEmptyPtr();
 
 	//funUniquePtr();
+
+	funSharedPtrArray();
 }

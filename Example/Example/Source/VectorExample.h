@@ -553,8 +553,8 @@ void functionVector()
 	//funVectorSortTestClass();
 
 	//funVectorFindInt();
-	funVectorCopyEndInt();
-	//funVectorAt();
+	//funVectorCopyEndInt();
+	funVectorAt();
 
 	//funIterators();
 

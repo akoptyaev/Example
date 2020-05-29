@@ -28,6 +28,9 @@
     <Filter Include="Исходные файлы\Source\c++11">
       <UniqueIdentifier>{c134586c-47f6-4181-a68e-9ca4a09c4649}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Source\Наследование">
+      <UniqueIdentifier>{ddbdfa1b-605c-4fef-8332-f929f23cd36d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="Source\Cpp17.cpp">
       <Filter>Исходные файлы\Source\c++17</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Inheritance.cpp">
+      <Filter>Исходные файлы\Source\Наследование</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="Source\TestClassConstruct.h">
       <Filter>Исходные файлы\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Inheritance.h">
+      <Filter>Исходные файлы\Source\Наследование</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

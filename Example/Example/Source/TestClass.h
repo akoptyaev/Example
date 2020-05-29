@@ -5,6 +5,11 @@
 
 using namespace std;
 
+#define COUT std::cout <<
+#define SPACE << ' ' <<
+#define VSPACE std::cout << std::endl
+#define ENDL << std::endl
+
 class TestClass
 {
 public:
@@ -40,6 +45,7 @@ public:
 	static void message(const string& text);
 	static void line(const string& text = string());
 	static void lineShort(const string& text = string());
+	static void spaceVert(const int count = 1);
 
 protected:
 	void setText(const string& text);

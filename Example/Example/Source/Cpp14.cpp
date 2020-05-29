@@ -1,6 +1,7 @@
 
 #include "Cpp14.h"
 #include <functional>
+#include "Inheritance.h"
 
 auto funAuto() {
 	auto var = 10; // int
@@ -117,10 +118,18 @@ void funAutolambda() {
 		};
 		cout << funL() << endl;
 
-		auto funLAuto = [] {
+		int varForL = 10;
+		int* pVarForL2 = new int(10);
+
+		//auto funLAuto = [varForL] { // нельзя ЕСЛИ НУЖНО изменить !!!
+		auto funLAuto = [&varForL, pVarForL2] { // Захват по ссылке, указатель можно передать как переменную
+			varForL = varForL * 222;
+			*pVarForL2 = *pVarForL2 * 333;
 			return 7654321;
 		};
-		cout << funL() << ' ' << funLAuto() << endl;
+		cout << funL() << ' ' << funLAuto() << " : " << varForL << " : " << *pVarForL2 << endl;
+
+		delete pVarForL2;
 	}
 
 	{
@@ -215,6 +224,43 @@ void funDeprecated() {
 
 //-------------------------------------
 
+void funExange() {
+	TestClass::lineShort("std::Exange");
+
+	{
+		int var1 = 10;
+		int var2 = 20;
+		int var3 = 30;
+
+		cout << var1 SPACE var2 SPACE var3 << endl;
+
+		var3 = std::exchange(var1, var2);
+
+		cout << var1 SPACE var2 SPACE var3 << endl;
+	}
+
+	{
+		VSPACE;
+
+		Base var1;
+		Base var2;
+		Base var3;
+
+		cout << var1.f SPACE var2.f SPACE var3.f << endl;
+
+		var3 = std::exchange(var1, var2);
+
+		cout << var1.f SPACE var2.f SPACE var3.f << endl;
+	}
+}
+
+
+
+//-------------------------------------
+//-------------------------------------
+//-------------------------------------
+//-------------------------------------
+
 void functionsCpp14() {
 	TestClass::line("[ C++ 14 ]");
 
@@ -238,4 +284,8 @@ void functionsCpp14() {
 
 	// Атрибут [[deprecated]]
 	funDeprecated();
+
+	// std::Exange
+	funExange();
+
 }

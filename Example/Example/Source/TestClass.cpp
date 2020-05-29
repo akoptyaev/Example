@@ -139,6 +139,13 @@ void TestClass::lineShort(const string& text)
 	}
 }
 
+void TestClass::spaceVert(const int count)
+{
+	for (int i = 0; i < count; ++i) {
+		cout << endl;
+	}
+}
+
 void TestClass::setText(const string& text) {
 	_text = text;
 }

@@ -146,6 +146,7 @@
     <ClCompile Include="Source\Cpp17.cpp" />
     <ClCompile Include="Source\DataClass.cpp" />
     <ClCompile Include="Source\Help.cpp" />
+    <ClCompile Include="Source\Inheritance.cpp" />
     <ClCompile Include="Source\Ptr.cpp" />
     <ClCompile Include="Source\Template.cpp" />
     <ClCompile Include="Source\TestClass.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="Source\DequeExample.h" />
     <ClInclude Include="Source\For.h" />
     <ClInclude Include="Source\Help.h" />
+    <ClInclude Include="Source\Inheritance.h" />
     <ClInclude Include="Source\ListExample.h" />
     <ClInclude Include="Source\MapExample.h" />
     <ClInclude Include="Source\Ptr.h" />

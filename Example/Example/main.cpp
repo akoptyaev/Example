@@ -17,6 +17,7 @@
 #include "Source/Cpp11.h"
 #include "Source/Cpp14.h"
 #include "Source/Cpp17.h"
+#include "Source/Inheritance.h"
 
 #include <string>
 #include <iostream>
@@ -92,10 +93,10 @@ int main(int count, char** param)
 
 	/*testDataClass();
 	testDataClassT();
-	functionVector();
-	// KOP_CRASH functionsSet();
-	functionsMap();
-	functionDeque();
+	functionVector();*/
+	// KOP_CRASH 	functionsSet();
+	//functionsMap();
+	/*functionDeque();
 	functionList();
 	functionQueue();
 	functionStack();
@@ -109,23 +110,25 @@ int main(int count, char** param)
 	funStatic_Assert();
 	funSizeof();
 	sort();
-	// KOP_EXCEPTION funThrow();
+	// KOP_EXCEPTION 	funThrow();
 
-	funCopyClass();
+	funCopyClass();*/
 
 	functionsTemplate();
 
-	functionSort();
+	/*functionSort();
 
 	funTemp();
 
 	funFor();*/
 
-	//funPtr();
-
-	functionsCpp11();
+	//functionsCpp11();
 	//functionsCpp14();
 	//functionsCpp17();
+
+	//funPtr();
+
+	//functionsInheritance();
 
 	// auto
 	/*{
